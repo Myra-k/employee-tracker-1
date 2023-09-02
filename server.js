@@ -173,7 +173,7 @@ async function promptEmployeeSelection(message) {
         [
             { name: 'None', value: null },
             ...allEmployees.map((employee) => ({
-                name: `${employee.firstName} ${employee.lastName}`,
+                name: employee.first_name + " " + employee.last_name,
                 value: employee.id,
             })),
         ];
