@@ -1,5 +1,6 @@
 const mysql = require('mysql2/promise');
 
+
 const dbConnection = mysql.createPool({
     host: 'localhost',
     user: 'root',
@@ -10,27 +11,27 @@ const dbConnection = mysql.createPool({
     queueLimit: 0,
 });
 
-const fetchEmployees = async () => {
+const listEmployees = async () => {
     const [rows, fields] = await dbConnection.execute('SELECT * FROM employee');
     return rows;
 };
 
-const fetchDepartments = async () => {
+const listDepartments = async () => {
     const [rows, fields] = await dbConnection.execute('SELECT * FROM department');
     return rows;
 };
 
-const fetchRoles = async () => {
+const listRoles = async () => {
     const [rows, fields] = await dbConnection.execute('SELECT * FROM role');
     return rows;
 };
 
-const fetchEmployeesUnderManager = async (managerId) => {
+const listEmployeesUnderManager = async (managerId) => {
     const [rows, fields] = await dbConnection.execute('SELECT id, first_name, last_name, role_id FROM employee WHERE manager_id = ?', [managerId]);
     return rows;
 };
 
-const fetchEmployeesInDepartment = async (departmentId) => {
+const listEmployeesInDepartment = async (departmentId) => {
     const [rows, fields] = await dbConnection.execute('SELECT * FROM EMPLOYEE e JOIN ROLE r ON e.role_id = r.id WHERE r.department_id = ?', [departmentId]);
     return rows;
 };
@@ -92,11 +93,11 @@ const removeRole = async (roleId) => {
 };
 
 module.exports = {
-    fetchEmployees,
-    fetchDepartments,
-    fetchRoles,
-    fetchEmployeesUnderManager,
-    fetchEmployeesInDepartment,
+    listEmployees,
+    listDepartments,
+    listRoles,
+    listEmployeesUnderManager,
+    listEmployeesInDepartment,
     addDepartment,
     addRole,
     addEmployee,
