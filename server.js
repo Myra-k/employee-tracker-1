@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const database = require('./db/employeeData.js');
+const database = require('./db/employeedata.js');
 
 async function initiateEmployeeManagement() {
     let continueExecution = true;
