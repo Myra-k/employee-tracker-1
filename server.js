@@ -113,7 +113,7 @@ async function addNewRole() {
 async function changeRoleDepartment() {
     const roleId = await promptRoleSelection();
     const newDepartmentId = await promptDepartmentSelection();
-    await database.changeRoleDepartment(newDepartmentId, roleId);
+    await database.updateRoleDepartment(newDepartmentId, roleId);
 }
 
 async function addNewEmployee() {
@@ -137,7 +137,7 @@ async function updateEmployeeRole() {
 async function updateManager() {
     const employeeToUpdateId = await promptEmployeeSelection("Select an employee: ");
     const newManagerId = await promptEmployeeSelection('Assign a new manager: ');
-    await database.updateManager(employeeToUpdateId, newManagerId);
+    await database.updateEmployeeManager(employeeToUpdateId, newManagerId);
 }
 
 async function removeDepartment() {
