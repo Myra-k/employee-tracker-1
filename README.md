@@ -29,9 +29,9 @@ Now you can see the various options in the terminal, where you can view, add, ed
 ## Usage
 
 Below is a walkthrough video on the usage: 
+(https://watch.screencastify.com/v/tqbLmgmGwK4sRG3JYbOf)
 
 
- 
 ## Contributions
 
 * Completed by Myra Khatoon
@@ -43,6 +43,7 @@ Below is a walkthrough video on the usage:
 
 * URL Of Github Repository (https://github.com/Myra-k/employee-tracker-1.git)
 
-## Licence
+
+## Licence
 
 N/A

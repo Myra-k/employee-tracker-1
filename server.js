@@ -56,11 +56,11 @@ async function initiateEmployeeManagement() {
             case 'Update manager':
                 await updateManager();
                 break;
-            case 'Remove department':
+            case 'Remove a department':
                 await removeDepartment();
                 break;
-            case 'Remove role':
-                await removeRole();
+            case 'Remove a role':
+                await removeRole(), promptRoleSelection();
                 break;
             case 'List employees under specific manager':
                 await listEmployeesUnderManager();
